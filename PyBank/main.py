@@ -4,7 +4,7 @@ import csv
 
 # Files to load and output:
 file_to_load = os.path.join("Resources", "budget_data.csv")
-file_to_output = os.path.join("PyBank", "main.py")
+file_to_output = os.path.join("Analysis", "budget_analysis.txt")
 
 # declare variables
 total_months = 0
@@ -14,6 +14,7 @@ greatest_increase = ["", 0]
 greatest_decrease = ["", 99999999999]
 total_net = 0
 
+# read csv file:
 with open(file_to_load) as financial_data:
     reader = csv.reader(financial_data)
 
