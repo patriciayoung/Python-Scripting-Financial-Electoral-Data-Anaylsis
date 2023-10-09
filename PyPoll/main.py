@@ -26,6 +26,7 @@ total_votes_per_candidate_percentage = 0
 election_winner = ""
 row_count = 0
 results = []
+position_in_results = 0
 
 # open csv file
 with open(file_to_load) as election_data:
@@ -35,22 +36,29 @@ with open(file_to_load) as election_data:
     for row in reader:
         if row_count != 0:
             print(row[2])
-# Returns the index of the first object with a matching value
-            if row [2] in results:
-                print('candidate in the list')
-            else:
-                print('candidate not in list')
-            total_votes = total_votes + 1
+
 # Add 1 candidate to the candidate_count in results (Add an element onto the end of a List)
 # Else add candidate name to results list and set candidate count to 1 in results list
-results.append(row [2])
-print(results)
-# add 1 to vote_count
-vote_count = vote_count + 1
-       
-       
-row_count = row_count + 1
+            if row [2] in results:
+# Returns the index of the first object with a matching value
+                print('candidate in the list')
+                print(results.index(row [2]))
+                position_in_results = results.index(row[2]) + 1
+                results[position_in_results] = results[position_in_results] + 1
+            else:
+                print('candidate not in list')
+                results.append(row [2])
+                results.append(1)
+            total_votes = total_votes + 1
 
+
+
+# add 1 to vote_count
+        vote_count = vote_count + 1
+       
+        row_count = row_count + 1
+
+print(results)
 ##Print end export results
 
 print('Election Result')
