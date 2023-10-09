@@ -6,7 +6,7 @@ import csv
 file_to_load = os.path.join("Resources", "budget_data.csv")
 file_to_output = os.path.join("Analysis", "budget_analysis.txt")
 
-### declare/initalize variables
+## declare/initalize variables
 #1. Total # of months
 #2. Net P&L
 #3. Average change on P&L
@@ -28,7 +28,7 @@ file_to_output = os.path.join("Analysis", "budget_analysis.txt")
 #Initializing variables
 total_months = 0
 total_pandl = 0
-change_pandl =0
+change_pandl = 0
 average_change = 0
 row_count = 0
 greatest_increase_pandl = 0
