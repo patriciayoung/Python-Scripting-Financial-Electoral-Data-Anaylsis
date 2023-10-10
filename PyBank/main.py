@@ -91,6 +91,7 @@ with open(file_to_output , 'w') as f:
 
 
 
+### Pseudo-code : used this to write above script:
 
 #FOR every row in the file
 #        IF row_count=0

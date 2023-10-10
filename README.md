@@ -79,5 +79,40 @@ Export to text file
 
 
 
-PyPoll:
+PyPoll Pseudo-code:
+
+# import dependencies and packages
+# Files to load and output:
+
+## declare/initalize variables
+#1. Total # of votes cast
+#2. Complete list of candidates who received votes
+#3. Percentage of votes each candidate won
+#4. Total # of votes each candidate won
+#5. Winner of election based on popluar vote
+ 
+#total_votes
+#total_votes_per_candidate_percentage
+#election_winner
+#row_count
+#results [store candidates names and # votes per candidate]
+
+#Initializing variables
+
+# open csv file
+
+# For every row in the file: read the row and accumalate in results list
+
+# Add 1 candidate to the candidate_count in results (Add an element onto the end of a List)
+# Else add candidate name to results list and set candidate count to 1 in results list
+
+# Returns the index of the first object with a matching value
+
+# add 1 to vote_count
+
+##Print end export results
+
+# Tallying results list /  Percentage
+
+# exporting to text file
 
