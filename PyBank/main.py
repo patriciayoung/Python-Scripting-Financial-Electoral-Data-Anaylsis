@@ -49,9 +49,7 @@ with open(file_to_load) as financial_data:
                 total_months = total_months+1
                 total_pandl = total_pandl + int(row [1])
                 change_pandl = int(row [1]) - previous_pandl
-                print('change_pandl', change_pandl, row [1], previous_pandl)
                 average_change=average_change+change_pandl
-                print(change_pandl, greatest_increase_pandl, greatest_decrease_pandl)
                 if change_pandl > greatest_increase_pandl:
                     greatest_increase_pandl = change_pandl
                     greatest_increase_date = row [0]
@@ -62,6 +60,34 @@ with open(file_to_load) as financial_data:
         row_count=row_count+1
 
 average_change = average_change/total_months
+
+
+# exporting to text file
+with open(file_to_output , 'w') as f:
+    f.write('Financial Analysis')
+    f.write('\n')
+    f.write('----------------------------')
+    f.write('\n')
+    f.write('Total Months ')
+    f.write(str(total_months))
+    f.write('\n')
+    f.write('Total ')
+    f.write(str(total_pandl))
+    f.write('\n')
+    f.write('Average Change ')
+    f.write(str(average_change))
+    f.write('\n')
+    f.write('Greatest Increase in Profits:  ')
+    f.write(str(greatest_increase_date))
+    f.write(" (")
+    f.write(str(greatest_increase_pandl))
+    f.write(")")
+    f.write('\n')
+    f.write('Greatest Decrease in Profits:  ')
+    f.write(str(greatest_decrease_date))
+    f.write(" (")
+    f.write(str(greatest_decrease_pandl))
+    f.write(")")
 
 
 
