@@ -1,5 +1,8 @@
 # Python-challenge
+Before running any code need to find your way to the current working directory in the terminal ( I was doing this in the terminal in VS code to get to the correct directory to be able to run the code; for both PyBank and PyPoll)
 
+
+PyBank pseudo-code
 1. Total # of months
 2. Net P&L
 3. Average change on P&L
@@ -72,3 +75,9 @@ Print(“Greatest increase in profits”,greatest_increase_date, greatest_increa
 Print(“Greatest decrease in profits”,greatest_decrease_date, greatest_decrease_pandl)
  
 Export to text file
+
+
+
+
+PyPoll:
+

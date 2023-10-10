@@ -48,16 +48,16 @@ with open(file_to_load) as financial_data:
             else:
                 total_months = total_months+1
                 total_pandl = total_pandl + int(row [1])
-                change_pandl = int(row [1])-previous_pandl
+                change_pandl = int(row [1]) - previous_pandl
                 print('change_pandl', change_pandl, row [1], previous_pandl)
                 average_change=average_change+change_pandl
                 print(change_pandl, greatest_increase_pandl, greatest_decrease_pandl)
                 if change_pandl > greatest_increase_pandl:
                     greatest_increase_pandl = change_pandl
                     greatest_increase_date = row [0]
-                if int(change_pandl) < int(greatest_decrease_pandl):
+                if change_pandl < greatest_decrease_pandl:
                     greatest_decrease_pandl = change_pandl
-                    greatest_decrease_pandl = row [0]
+                    greatest_decrease_date = row [0]
             previous_pandl = int(row [1])
         row_count=row_count+1
 
